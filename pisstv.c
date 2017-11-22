@@ -650,7 +650,7 @@ void buildaudio_pd120 () {
             avgg = (uint8_t)( ((uint16_t)g1 + (uint16_t)g2) / 2 );
 
             avgb = (uint8_t)( ((uint16_t)b1 + (uint16_t)b2) / 2 );
-
+             
             //Y value of even lines 
             y1[x] = 16.0 + (0.003906 * ((65.738 * (float)r1) + (129.057 * (float)g1) + (25.064 * (float)b1)));
             //Y value of odd lines
@@ -670,7 +670,8 @@ void buildaudio_pd120 () {
         //porch 
         playtone( 1500 , 3000 ) ;
         
-        //y scan, even, 88ms total, 640 points, 275us per pixel
+        //R36: y scan, even, 88ms total, 320 points, 275us per pixel
+	//PD120: y scan, even, 88ms??? total, 640 points, 275us??? per pixel
         for ( k = 0; k < 640; k++ ) {
             playtone( toneval_yuv( y1[k] ) , 275 ) ;
         }
@@ -679,8 +680,9 @@ void buildaudio_pd120 () {
         playtone( 1500 , 4500 );
         //porch
         playtone( 1900 , 1500 );
-
-        //R-Y scan, 44ms total, 640 points, 137.5us per pixel
+        
+	//R36: R-Y scan, 44ms?? total, 320 points, 137.5us?? per pixel
+        //PD120: R-Y scan, 44ms?? total, 640 points, 137.5us?? per pixel
         for ( k = 0; k < 640; k++ ) {
             playtone( toneval_yuv( ry[k] ) , 137.5 );
         }
@@ -690,8 +692,9 @@ void buildaudio_pd120 () {
         playtone( 1200 , 9000 ) ;
         // porch 
         playtone( 1500 , 3000 ) ;
-
-        //y scan, odd, 88ms total, 640 points, 275us per pixel
+	    
+        //R36: y scan, odd, 88ms total, 320 points, 275us per pixel
+        //PD120: y scan, odd, 88ms?? total, 640 points, 275us?? per pixel
         for ( k = 0; k < 640; k++ ) {
                 playtone( toneval_yuv( y2[k] ) , 275 ) ;
         }
@@ -700,8 +703,9 @@ void buildaudio_pd120 () {
         playtone( 2300 , 4500 );
         //porch
         playtone( 1900 , 1500 );
-
-        //B-Y scan, 44ms total, 640 points, 137.5us per pixel
+	    
+        //R36: B-Y scan, 44ms total, 320 points, 137.5us per pixel
+        //PD120: B-Y scan, 44ms?? total, 640 points, 137.5us?? per pixel
         for ( k = 0; k < 640; k++) {
             playtone( toneval_yuv( by[k] ) , 137.5);
         }
