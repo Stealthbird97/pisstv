@@ -76,6 +76,7 @@ uint16_t toneval_yuv        (uint8_t colorval) ;
 void     buildaudio_m     (double pixeltime) ;
 void     buildaudio_s     (double pixeltime) ;
 void     buildaudio_r36     (void) ;
+void     buildaudio_pd120     (void) ;
 
 #ifdef AUDIO_AIFF
 void     writefile_aiff (void) ;
