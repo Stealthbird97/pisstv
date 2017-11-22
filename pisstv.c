@@ -574,9 +574,9 @@ void buildaudio_r36 () {
         //porch 
         playtone( 1500 , 3000 ) ;
         
-        //y scan, even, 90ms total, 320 points, 281.25us per pixel
+        //y scan, even, 88ms total, 320 points, 275us per pixel
         for ( k = 0; k < 320; k++ ) {
-            playtone( toneval_yuv( y1[k] ) , 281.25 ) ;
+            playtone( toneval_yuv( y1[k] ) , 275 ) ;
         }
         
         //even line seperator
@@ -584,9 +584,9 @@ void buildaudio_r36 () {
         //porch
         playtone( 1900 , 1500 );
 
-        //R-Y scan, 45ms total, 320 points, 140.0625us per pixel
+        //R-Y scan, 44ms total, 320 points, 137.5us per pixel
         for ( k = 0; k < 320; k++ ) {
-            playtone( toneval_yuv( ry[k] ) , 140.0625 );
+            playtone( toneval_yuv( ry[k] ) , 137.5 );
         }
 
         //odd lines
@@ -595,9 +595,9 @@ void buildaudio_r36 () {
         // porch 
         playtone( 1500 , 3000 ) ;
 
-        //y scan, odd, 90ms total, 320 points, 281.25us per pixel
+        //y scan, odd, 88ms total, 320 points, 275us per pixel
         for ( k = 0; k < 320; k++ ) {
-                playtone( toneval_yuv( y2[k] ) , 281.25 ) ;
+                playtone( toneval_yuv( y2[k] ) , 275 ) ;
         }
 
         //odd line seperator
@@ -605,10 +605,10 @@ void buildaudio_r36 () {
         //porch
         playtone( 1900 , 1500 );
 
-        //B-Y scan, 45ms total, 320 points, 140.0625us per pixel
+        //B-Y scan, 44ms total, 320 points, 137.5us per pixel
         for ( k = 0; k < 320; k++) {
-            playtone( toneval_yuv( by[k] ) , 140.062);
-        }
+            playtone( toneval_yuv( by[k] ) , 137.5);
+}
   
     }  // end for y
     
