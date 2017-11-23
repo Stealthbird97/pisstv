@@ -34,7 +34,7 @@ Supported protocols and their respective options:
 * Robot 36: r36
 * PD 120: pd120
 
-`file` must be a PNG or JPG formatted image. Be advised that all modes except Robot 36 can only accept 320x256 sized images without cropping, whereas Robot 36 can only accept 320x240 sized images without cropping. The PD120 mode accept only 480x496 sized images.
+`file` must be a PNG or JPG formatted image. Be advised that all modes except Robot 36 can only accept 320x256 sized images without cropping, whereas Robot 36 can only accept 320x240 sized images without cropping. The PD120 mode accept only 640x496 sized images.
 
 For instance, to create an audio file with the Scottie 2 protocol with a sampling rate of 22050Hz, and the input as a file `buzzece_qr.png` invoke:
 
