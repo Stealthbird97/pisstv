@@ -5,7 +5,7 @@ Its intended for use by ham radio amateurs.
 
 ## Compiling
 
-To compile PiSSTVpp, you should download this repository and also have:
+To compile PiSSTV, you should download this repository and also have:
 
 * gcc
 * libgd
@@ -43,8 +43,6 @@ For instance, to create an audio file with the Scottie 2 protocol with a samplin
 This will create `buzzece_qr.png.wav` in the working directory that encodes the ECE Buzz image in the Scottie 2 protocol.
 
 ## Other things
-
-There are some shell and Python scripts that carried over from the original repository by AgriVision (Gerrit Polder, PA3BYA). They should have been modified to work with the PiSSTVpp, but is not tested.
 
 pisstv: to convert the image to a soundfile.
 
