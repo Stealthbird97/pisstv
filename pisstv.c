@@ -128,7 +128,7 @@ int main(int argc, char *argv[]) {
     }
 	 }
     else if ( strcmp(protocol,"pd120") == 0) {
-        g_protocol = 10; //PD 120
+        g_protocol = 95; //PD 120
     }
     else {
         printf("Unrecognized protocol option %s, defaulting to Martin 1...\n\n", protocol);
@@ -230,7 +230,7 @@ int main(int argc, char *argv[]) {
             break;
         case 8: //Robot 36
             buildaudio_r36();
-        case 10: //PD 120
+        case 95: //PD 120
             buildaudio_p120();
             break;      break;
 		    
